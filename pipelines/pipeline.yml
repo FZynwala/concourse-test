@@ -10,6 +10,6 @@ jobs:
   - name: job-hello-deploy
     public: true
     plan:
-      - get: concourse-tutorial
+      - get: concourse-test
       - task: hello-world
         file: concourse-test/task_deploy.yml
