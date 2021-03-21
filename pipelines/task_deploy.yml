@@ -1,0 +1,3 @@
+run:
+  path: git
+  args: [push heroku master]

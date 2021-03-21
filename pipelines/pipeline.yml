@@ -7,9 +7,9 @@ resources:
       branch: master
 
 jobs:
-  - name: job-hello-concourse
+  - name: job-hello-deploy
     public: true
     plan:
-      - get: resource-tutorial
+      - get: concourse-tutorial
       - task: hello-world
-        file: resource-tutorial/tutorials/basic/task-hello-world/task_hello_world.yml
+        file: concourse-test/task_deploy.yml
