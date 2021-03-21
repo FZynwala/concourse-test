@@ -1,0 +1,15 @@
+---
+resources:
+  - name: concourse-test
+    type: git
+    source:
+      uri: https://github.com/FZynwala/concourse-test.git
+      branch: master
+
+jobs:
+  - name: job-hello-concourse
+    public: true
+    plan:
+      - get: resource-tutorial
+      - task: hello-world
+        file: resource-tutorial/tutorials/basic/task-hello-world/task_hello_world.yml
